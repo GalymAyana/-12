@@ -1,0 +1,10 @@
+import pandas as pd
+import numpy as np
+
+health_data = pd.read_csv("data.csv", header=0, sep=",")
+
+x = health_data["house_size"]
+y = health_data["house_price"]
+slope_intercept = np.polyfit(x,y,1)
+
+print(slope_intercept)
